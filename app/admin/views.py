@@ -1,4 +1,4 @@
-from . import admin
+from . import admin #必须从点导入
 
 
 @admin.route("/")
