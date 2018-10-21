@@ -9,11 +9,17 @@ def index(name):
 
 
 @home.route("/agent")
-def test1():
+def agent():
     user_agent = request.headers.get("User-Agent")
-    return "<p>你的浏览器是%s</p>" % user_agent
+    return render_template('home/mine.html', name=user_agent)
+
 
 
 @home.route("/")
 def htmltest():
-    return render_template("home/test.html", data={"name": "蒲小帅"})
+    list = ["Python", "Java", "C++"]
+
+    def hello():
+        return "我是方法"
+
+    return render_template("home/home.html", data={"name": "蒲小帅"}, hello=hello(), listdata=list)
