@@ -1,7 +1,7 @@
 from app.home.froms import RegistForm
 from . import home  # 必须从点导入
-from flask import request, url_for
-from flask import render_template,redirect,flash
+from flask import request, url_for, flash
+from flask import render_template,redirect,request
 
 
 
@@ -27,14 +27,12 @@ def htmltest():
     return render_template("home/home.html", data={"name": "蒲小帅"}, hello=hello(), listdata=list)
 @home.route('/register',methods=["GET","POST"])
 def register():
-    if request.method=="GET":
-        form =RegistForm()
-        return  render_template("home/register.html",form=form)
-    elif request.method=="POST":
-        form=RegistForm()
-        if form.validate_on_submit():
-            name=form.username.data
-            pwd=form.password.data
-            return redirect(url_for('agent'))
+    if request.method=="POST":
+        if request.form['username']=='puhao'or request.form['password']=='123456':
+            flash("登录成功")
+            return redirect(url_for('home.agent'))
         else:
-            return  render_template("home/register.html",form=form)
+            flash("登录失败")
+    return render_template('home/register.html')
+
+
