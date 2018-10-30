@@ -1,0 +1,48 @@
+{% extends 'base/base_nav.html' %}
+{% block page_content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <img style="width: 160px;height: 160px" alt="Bootstrap Image Preview"
+                     src="{{ url_for("static",filename="images/icon.jpg") }}"/>
+            </div>
+            <div class="col-md-10">
+                <h2>
+                    电影天堂
+                </h2>
+                <p>
+                    电影天堂是国内较大的电影在线观看和下载平台。主要有迅雷下载和快车下载和电驴以及手机视频格式下载。数据已经达到超出100多万部资源，千万小时时长。还能提供在线观看和下载最新的国内外电影和连续剧的服务。电影天堂提供其他剧情电影，大多都是都是高清电影，保持每天海量数据的更新
+                </p>
+
+                <form role="form" action="/register" method="post">
+                    <div class="form-group">
+
+                        <label for="exampleInputText">
+                            登录名字
+                        </label>
+                        <input type="text" class="form-control" id="exampleInputText"/>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="exampleInputPassword1">
+                            密码
+                        </label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"/>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="exampleInputPassword1">
+                            确认密码
+                        </label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        登录
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

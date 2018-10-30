@@ -5,6 +5,8 @@ from app import app_task
 
 app_task.config['TEMPLATES_AUTO_RELOAD'] = True
 
+app_task.config['SECRET_KEY']="hard to guess string"
+
 
 @app_task.errorhandler(404)
 def page_not_found(e):
