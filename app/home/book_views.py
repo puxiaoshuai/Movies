@@ -1,10 +1,10 @@
 
 from app.home.froms import SearchForm
-from app.home.net_books import YushuBook
+from app.spider.net_books import YushuBook
 from . import home  # 必须从点导入
-from flask import request, url_for, flash,jsonify
-from flask import render_template, redirect, request
-from  helper import is_isbn
+from flask import jsonify
+from flask import request
+from app.libs.helper import is_isbn
 
 
 #////@home.route("/book/search/<q>/<page>")

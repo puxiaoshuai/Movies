@@ -1,0 +1,32 @@
+{% extends 'base/base_nav.html' %}
+{% block page_content %}
+    <h1>豆瓣电影 Top 250</h1>
+
+<div class="container-fluid">
+	<div class="row" >
+        {% for movie in result %}
+            <div class="col-md-3" style="margin-top: 32px">
+			<img  style="width: 140px;height: 180px" alt="加载失败" src={{ movie.icon }} class="img-thumbnail"  onerror="this.src={{ url_for('static',filename='images/icon.jpg')}}"  />
+		</div>
+		<div class="col-md-9" style="margin-top: 32px">
+			<h2>
+				{{ movie.title }}
+			</h2>
+            <h5>
+				{{ movie.zhuyan }}
+			</h5>
+			<p>
+				{{ movie.genres }}
+			</p>
+			<p>
+				<a class="btn" href="#">查看详情</a>
+			</p>
+		</div>
+         {% endfor %}
+
+
+
+	</div>
+
+</div>
+{% endblock %}
