@@ -5,7 +5,8 @@
     <link href="{{ url_for('static',filename='css/banner.css') }}" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ url_for('static',filename="css/case.css") }}"/>
     <link rel="stylesheet" href="{{ url_for('static',filename="css/screenshot.css") }}"/>
-    <link rel="stylesheet" href="{{ url_for('static',filename="css/text.css") }}"/>
+   {# <link rel="stylesheet" href="{{ url_for('static',filename="css/text.css") }}"/>#}
+
 {% endblock %}
 
 {% block page_content %}
@@ -17,14 +18,14 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo.jpg") }}" alt="First slide">
+                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo4.jpg") }}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
 
                     <p style="color: #ff4947">大数据平台</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo1.jpg") }}"
+                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo4.jpg") }}"
                      alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
 
@@ -32,7 +33,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo2.jpg") }}" alt="Third slide">
+                <img class="d-block w-100" src="{{ url_for('static',filename="images/lunbo4.jpg") }}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
 
                     <p style="color: #ff4947">C++展示</p>
@@ -51,19 +52,19 @@
     <div class="case container">
         <div class="row">
             <div class="col-md-4">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}"  class="img-thumbnail" alt="Three slide">
-                <h4>实验案例1</h4>
-                <p>非常不错的产品,我喜欢</p>
+                <img src="{{ url_for('static',filename="images/ic1.jpg") }}"  class="img-thumbnail" alt="Three slide">
+                <h4>泰坦尼克号</h4>
+                <p>浪漫的爱情诠释</p>
             </div>
             <div class="col-md-4">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}" class="img-thumbnail" alt="Three slide">
-                <h4>实验案例2</h4>
-                <p>非常不错的产品,我喜欢</p>
+                <img src="{{ url_for('static',filename="images/ic2.jpg") }}" class="img-thumbnail" alt="Three slide">
+                <h4>霸王别姬</h4>
+                <p>哥哥的经典作品</p>
             </div>
             <div class="col-md-4">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}"class="img-thumbnail" alt="Three slide">
-                <h4>实验案例3</h4>
-                <p>非常不错的产品,我喜欢</p>
+                <img src="{{ url_for('static',filename="images/ic3.jpg") }}"class="img-thumbnail" alt="Three slide">
+                <h4>杀手不太冷</h4>
+                <p>小女孩爱大叔</p>
             </div>
 
         </div>
@@ -71,96 +72,37 @@
     <div class="container  screenshot">
         <div class="row item">
             <div class="col-md-5">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}" alt="Three slide">
+                <img src="{{ url_for('static',filename="images/ic4.jpg") }}" alt="Three slide">
             </div>
             <div class="col-md-7">
-                <h2>资料1</h2>
-                <p>资料说明1，资料说明1，资料说明1，资料说明1，资料说明1，</p>
+                <h2>阿甘正传</h2>
+                <p>《阿甘正传》是由罗伯特·泽米吉斯执导的电影，由汤姆·汉克斯、罗宾·怀特等人主演，于1994年7月6日在美国上映。电影改编自美国作家温斯顿·格卢姆于1986年出版的同名小说，描绘了先天智障的小镇男孩福瑞斯特·甘自强不息，最终“傻人有傻福”地得到上天眷顾，在多个领域创造奇迹的励志故事。电影上映后，于1995年获得奥斯卡最佳影片奖、最佳男主角奖、最佳导演奖等6项大奖</p>
             </div>
         </div>
         <div class="row item">
             <div class="col-md-5">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}" alt="Three slide">
+                <img src="{{ url_for('static',filename="images/ic6.jpg") }}" alt="Three slide">
             </div>
             <div class="col-md-7">
-                <h2>资料1</h2>
-                <p>资料说明1，资料说明1，资料说明1，资料说明1，资料说明1，</p>
+                <h2>泰坦尼克号</h2>
+                <p>泰坦尼克号是当时世界上体积最庞大、内部设施最豪华的客运轮船，有“永不沉没”的美誉 。然而讽刺的是，在她的处女航中，泰坦尼克号便遭厄运——她从英国南安普敦出发，途经法国瑟堡-奥克特维尔以及爱尔兰昆士敦，驶向美国纽约，船上时间1912年4月14日23时40分左右，泰坦尼克号与一座冰山相撞，造成右舷船艏至船中部破裂，五座水密舱进水</p>
             </div>
         </div>
         <div class="row item">
             <div class="col-md-5">
-                <img src="{{ url_for('static',filename="images/icon.jpg") }}" alt="Three slide">
+                <img src="{{ url_for('static',filename="images/ic7.jpg") }}" alt="Three slide">
             </div>
             <div class="col-md-7">
-                <h2>资料1</h2>
-                <p class="text_red">资料说明1，资料说明1，资料说明1，资料说明1，资料说明1，</p>
+                <h2>千与千寻</h2>
+                <p class="text_red">《千与千寻》是宫崎骏执导、编剧，柊瑠美、入野自由、中村彰男、夏木真理等配音，吉卜力工作室制作的动画电影，于2001年7月20日在日本上映。该片讲述了少女千寻意外来到神灵异世界后，为了救爸爸妈妈，经历了很多磨难的故事。2001年该片在日本最终取得了304亿日元的票房。</p>
             </div>
         </div>
 
     </div>
 
-  <form class="form-horizontal">
-    <fieldset>
-      <div id="legend" class="">
-        <legend class="">表单名</legend>
-      </div>
-    <div class="control-group">
-          <label class="control-label">Inline Checkboxes</label>
 
-          <!-- Multiple Checkboxes -->
-          <div class="controls">
-            <label class="checkbox inline">
-              <input type="checkbox" value="1"> 1
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" value="2"> 2
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" value="3"> 3
-            </label>
-          </div>
-
-        </div>
-
-    <div class="control-group">
-          <label class="control-label">Inline radios</label>
-          <div class="controls">
-
-            <!-- Inline Radios -->
-            <label class="radio inline">
-              <input type="radio" value="1" checked="checked" name="group">
-              1
-            </label>
-            <label class="radio inline">
-              <input type="radio" value="2" name="group">
-              2
-            </label>
-            <label class="radio inline">
-              <input type="radio" value="3">
-              3
-            </label>
-          </div>
-        </div>
-
-    </fieldset>
-  </form>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
 {% endblock %}
+
 
 

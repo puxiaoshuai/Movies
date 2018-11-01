@@ -4,6 +4,8 @@ from . import home  # 必须从点导入
 from flask import url_for, flash
 from flask import render_template, redirect, request
 import json
+from flask_sqlalchemy import SQLAlchemy
+
 
 @home.route("/user/<name>")
 def index(name):
@@ -30,15 +32,17 @@ def htmltest():
 def register():
 
     form=RegistForm(request.form)
-    if form.validate():
-        if request.method == "POST":
+    if request.method == "POST":
+        if  form.validate():
             if form.username.data=='puhao' :
                 flash("登录成功")
                 return redirect(url_for('home.agent'))
             else:
                 flash("登录失败")
+        else:
+            flash(form.errors)
     else:
-        flash(form.errors)
+        pass
     return render_template('home/register.html')
     # if request.method == "POST":
     #     if request.form['username'] == 'puhao' or request.form['password'] == '123456':
@@ -48,6 +52,9 @@ def register():
     #         flash("登录失败")
     # return render_template('home/register.html')
 #api  这就算写接口了
+
+
+
 @home.route("/news",methods=['GET'])
 def start():
     data=[{'name':'puxiaoshuai'},{'age':25},{'address':u"成都"}]

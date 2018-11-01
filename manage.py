@@ -6,6 +6,7 @@ from app import app_task
 
 
 
+
 # app_task.config['DEBUG']读取，必须大写
 
 @app_task.errorhandler(404)

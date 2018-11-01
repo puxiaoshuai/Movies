@@ -1,5 +1,10 @@
+
 .screenshot .item {
   border-top: 1px solid #CCC;
   padding-bottom: 30px;
   padding-top: 20px;
+}
+.screenshot img{
+   height: 300px;
+    width: 200px;
 }
